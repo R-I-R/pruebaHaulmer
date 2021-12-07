@@ -19,19 +19,19 @@ La api por defecto se inicia en http://localhost:8000, esta cuenta con 3 endpoin
 ---
 # Capturas de uso
 El usuario se crea haciendo POST a /api/new entregando un JSON con el email, nombre y contraseña
-![crear usuario](./images/new_user.png)
+![crear usuario](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/new_user.PNG)
 La sesion se inica haciendo POST a /api/login entregando al body un JSON con el email y contraseña
-![iniciar sesion](./images/login.png)
+![iniciar sesion](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/login.PNG)
 La consulta de datos se realiza haciendo un GET a /api/me pasando el token de sesion por la cabecera
-![consultar datos](./images/consulta_datos.png)
+![consultar datos](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/consulta_datos.PNG)
 Los datos se editan haciendo PUT a /api/me pasando porel body los datos a editar y con el token en el header
-![editar datos](./images/update_usuario.png)
+![editar datos](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/update_usuario.PNG)
 La sesion se cierra haciendo DELETE a /api/login
-![cerrar sesion](./images/logout.png)
+![cerrar sesion](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/logout.PNG)
 Como los datos fueron editados anteriormente el login debe hacerse con las nuevas credenciales
-![inicio de sesion datos nuevos](./images/new_login.png)
+![inicio de sesion datos nuevos](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/newlogin.PNG)
 El usuario se borra haciendo DELETE a /api/me
-![borrar usuario](./images/delete_user.png)
+![borrar usuario](https://raw.githubusercontent.com/R-I-R/pruebaHaulmer/master/images/delete_user.PNG)
 
 ---
 [Postman documentation](https://documenter.getpostman.com/view/18671160/UVJihZtz)
