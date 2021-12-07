@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+		App\Providers\AuthUserProvider::class,
+		//App\Providers\UserProvider::class,
+
+		Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
     ],
 
     /*

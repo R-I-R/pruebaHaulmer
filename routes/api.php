@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+	'jwt.auth' => 'api',
+	'prefix' => 'auth'
+], function ($router) {
+	Route::post('login', [\App\Http\Controllers\Api\UserController::class, 'login'])->name('login');
+	Route::delete('login', [\App\Http\Controllers\Api\UserController::class, 'logout'])->name('logout');
+	Route::post('new', [\App\Http\Controllers\Api\UserController::class, 'new'])->name('new');
+	Route::get('me', [\App\Http\Controllers\Api\UserController::class, 'me'])->name('me');
+	Route::put('me', [\App\Http\Controllers\Api\UserController::class, 'update'])->name('update');
+	Route::delete('me', [\App\Http\Controllers\Api\UserController::class, 'delete'])->name('delete');
 });
