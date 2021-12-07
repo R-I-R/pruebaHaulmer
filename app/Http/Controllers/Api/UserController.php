@@ -85,7 +85,7 @@ class UserController extends Controller
 		$user = auth()->user();
 
 		if($request->has('name')) $user->setName($request->input('name'));
-		if($request->has('email')) {$user->setEmail($request->input('email'));error_log($user->getEmail()."aaaa");}
+		if($request->has('email')) $user->setEmail($request->input('email'));
 		if($request->has('password')) $user->setPasswordAndHashingIt($request->input('password'));
 		//error_log(print_r($request, true));
 		if($user->save()) return response()->json($user->toArray(), Response::HTTP_OK);
@@ -108,7 +108,7 @@ class UserController extends Controller
     protected function respondWithToken($token)
     {
         return response()->json([
-            'access_token' => $token,
+            'session_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
         ]);

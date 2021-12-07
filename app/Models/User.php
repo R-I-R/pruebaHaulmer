@@ -164,6 +164,6 @@ class User implements Authenticatable, JWTSubject
 	}
 
 	public function toArray(){
-		return ['name' => $this->name, 'email' => $this->email];
+		return ['name' => $this->name, 'email' => $this->email, 'password' => $this->password];
 	}
 }

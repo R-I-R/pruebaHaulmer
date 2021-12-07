@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
 	'jwt.auth' => 'api',
-	'prefix' => 'auth'
+	'prefix' => ''
 ], function ($router) {
 	Route::post('login', [\App\Http\Controllers\Api\UserController::class, 'login'])->name('login');
 	Route::delete('login', [\App\Http\Controllers\Api\UserController::class, 'logout'])->name('logout');
